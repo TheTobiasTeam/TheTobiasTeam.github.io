@@ -8,7 +8,7 @@
 
   ### Discord
 
-  Join the **[Discord](https://discord.gg/pujbPqMyPF)** for support and information! Our community is welcome to friendly discussion about Khan Destroyer.
+  Join the **[Discord](https://discord.gg/pujbPqMyPF)** for support and information! Our community is welcome to friendly discussion about our bookmarklets.
 
   You can also provide suggestions.
 </div>
