@@ -26,7 +26,8 @@ body {
 
 body {
   font-size: 0.9375rem;
-  font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
   color: var(--text);
   background: url(background.jpg) center center no-repeat fixed;
   background-size: cover;
@@ -39,10 +40,9 @@ div#content {
   height: calc(100% - 12rem);
   max-height: calc(100% - 12rem);
   overflow: hidden;
-
-  & > * {
-    margin-bottom: 1rem;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 
   nav {
     display: flex;
@@ -89,7 +89,6 @@ h5,
 h6 {
   line-height: 1;
   text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
-
   font-weight: 300;
 }
 
@@ -100,6 +99,8 @@ h1 {
 code {
   overflow-wrap: anywhere;
   padding: 0.2rem;
+  line-height: 1.5;
+  background-color: rgb(from var(--bg) r calc(g + 10) calc(b + 30) / 0.9);
 }
 
 @media screen and (max-width: 20rem) {

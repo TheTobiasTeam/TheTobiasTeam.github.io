@@ -13,7 +13,9 @@ function changeTab() {
     for (const link of document.querySelectorAll("nav > a")) {
       link.classList.remove("active");
     }
-    document.querySelector(`nav > a[href=\"#${path}\"]`).classList.add("active");
+    document
+      .querySelector(`nav > a[href=\"#${path}\"]`)
+      .classList.add("active");
   } else {
     // do stuff for jumping to bookmarklets
   }
