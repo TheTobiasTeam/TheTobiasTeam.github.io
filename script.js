@@ -1,6 +1,6 @@
 function changeTab() {
   let path = location.hash.toString();
-  if (path === "#") {
+  if (path === "#" || !path) {
     path = "#home";
   }
   path = path.slice(1);
