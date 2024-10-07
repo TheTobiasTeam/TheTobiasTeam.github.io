@@ -35,8 +35,8 @@ function changeTab() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  if ((navigator.language || navigator.userLanguage).indexOf("pt") === 0) {
-    window.location.replace("/pt/");
+  if ((navigator.language || navigator.userLanguage).indexOf("en") === 0) {
+    window.location.replace("/");
   }
   childDivs = document.querySelectorAll("main > div");
   views = document.querySelectorAll("div#bookmarklet-view > div");
