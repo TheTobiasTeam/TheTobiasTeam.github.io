@@ -42,44 +42,72 @@
         </div>
         <div id="bookmarklets">
           <h2>Bookmarklets</h2>
-          <p>How to use bookmarklets:</p>
+          <h4>How to use bookmarklets:</h4>
           <ol>
             <li>Select all of code</li>
             <li>Drag it to your bookmarks bar</li>
             <li>Click when you want to run the bookmarklet</li>
           </ol>
-          <h3>Eruda/Console Editor</h3>
-          <code>
-            javascript:(function () { var script =
-            document.createElement(&#039;script&#039;);
-            script.src=&quot;https://cdn.jsdelivr.net/npm/eruda&quot;;
-            document.body.append(script); script.onload = function () {
-            eruda.init(); } })();
-          </code>
-          <h3>Firebug/Inspect Element</h3>
-          <code>
-            javascript:var
-            firebug=document.createElement(&#039;script&#039;);firebug.setAttribute(&#039;src&#039;,&#039;https://luphoria.com/fbl/fbl/firebug-lite-debug.js&#039;);
-          </code>
-          <h3>X-Ray Goggles</h3>
-          <code>
-            javascript:(function () {var
-            script=document.createElement(&#039;script&#039;);script.src=&#039;https://x-ray-goggles.mouse.org/webxray.js&#039;;script.className=&#039;webxray&#039;;script.setAttribute(&#039;data-lang&#039;,&#039;en-US&#039;);script.setAttribute(&#039;data-baseuri&#039;,&#039;https://x-ray-goggles.mouse.org&#039;);document.body.appendChild(script);}());
-          </code>
-          <h3>Page Editor</h3>
-          <code>
-            javascript:if(document.body.contentEditable !=
-            &#039;true&#039;)void(document.body.contentEditable =
-            &#039;true&#039;);else void(document.body.contentEditable =
-            &#039;false&#039;);
-          </code>
+          <h4>List of Bookmarklets:</h4>
+          <ul>
+            <li><a href="#eruda">Eruda/Console Editor</a></li>
+            <li><a href="#firebug">Firebug</a></li>
+            <li><a href="#x-ray-goggles">X-Ray Goggles</a></li>
+            <li><a href="#page-editor">Page Editor</a></li>
+          </ul>
+          <div id="bookmarklet-view">
+            <div id="eruda">
+              <h3>Eruda/Console Editor</h3>
+              <code>
+                javascript:(function () { var script =
+                document.createElement(&#039;script&#039;);
+                script.src=&quot;https://cdn.jsdelivr.net/npm/eruda&quot;;
+                document.body.append(script); script.onload = function () {
+                eruda.init(); } })();
+              </code>
+            </div>
+            <div id="firebug">
+              <h3>Firebug/Inspect Element</h3>
+              <code>
+                javascript:var
+                firebug=document.createElement(&#039;script&#039;);firebug.setAttribute(&#039;src&#039;,&#039;https://luphoria.com/fbl/fbl/firebug-lite-debug.js&#039;);
+              </code>
+            </div>
+            <div id="x-ray-goggles">
+              <h3>X-Ray Goggles</h3>
+              <code>
+                javascript:(function () {var
+                script=document.createElement(&#039;script&#039;);script.src=&#039;https://x-ray-goggles.mouse.org/webxray.js&#039;;script.className=&#039;webxray&#039;;script.setAttribute(&#039;data-lang&#039;,&#039;en-US&#039;);script.setAttribute(&#039;data-baseuri&#039;,&#039;https://x-ray-goggles.mouse.org&#039;);document.body.appendChild(script);}());
+              </code>
+            </div>
+            <div id="page-editor">
+              <h3>Page Editor</h3>
+              <code>
+                javascript:if(document.body.contentEditable !=
+                &#039;true&#039;)void(document.body.contentEditable =
+                &#039;true&#039;);else void(document.body.contentEditable =
+                &#039;false&#039;);
+              </code>
+            </div>
+          </div>
         </div>
         <div id="proxies">
           <h2>Proxies</h2>
           <p>Coming soon!</p>
         </div>
       </main>
-      <footer>Links go here...</footer>
+      <footer>
+        <img src="logo.jpg" />
+        <a href="https://github.com/DarrrkSide/Tempostorin">
+          Bookmarklets/Hacks/Proxies
+        </a>
+        <a href="https://github.com/ilytobias/Khan-Destroyer/tree/main/cheats">
+          Khan Academy Hacks
+        </a>
+        <a href="https://github.com/marcos10pc/cmsp-cheeto/tree/main"
+          >CMSP Hacks</a
+        >
+      </footer>
     </div>
   </body>
 </html>

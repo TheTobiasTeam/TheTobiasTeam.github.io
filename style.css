@@ -52,14 +52,30 @@ div#content {
   }
 
   main {
-    height: calc(100% - 10rem);
-    max-height: calc(100% - 10rem);
+    height: calc(100% - 11rem);
+    max-height: calc(100% - 11rem);
     overflow-y: auto;
 
-    div {
+    & > div {
       display: none;
     }
   }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 2rem;
+    gap: 1rem;
+    img {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+}
+
+div#bookmarklet-view > div {
+  display: none;
 }
 
 a {

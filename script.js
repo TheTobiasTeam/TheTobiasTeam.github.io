@@ -1,3 +1,18 @@
+let childDivs;
+let views;
+
+function changeMainView(path) {
+  for (const childDiv of childDivs) {
+    childDiv.style.display = "none";
+  }
+  const content = document.getElementById(path);
+  content.style.display = "block";
+  for (const link of document.querySelectorAll("nav > a")) {
+    link.classList.remove("active");
+  }
+  document.querySelector(`nav > a[href=\"#${path}\"]`).classList.add("active");
+}
+
 function changeTab() {
   let path = location.hash.toString();
   if (path === "#" || !path) {
@@ -5,23 +20,23 @@ function changeTab() {
   }
   path = path.slice(1);
   if (["home", "bookmarklets", "proxies"].includes(path)) {
-    for (const childDiv of document.querySelectorAll("main > div")) {
-      childDiv.style.display = "none";
-    }
-    const content = document.getElementById(path);
-    content.style.display = "block";
-    for (const link of document.querySelectorAll("nav > a")) {
-      link.classList.remove("active");
-    }
-    document
-      .querySelector(`nav > a[href=\"#${path}\"]`)
-      .classList.add("active");
+    changeMainView(path);
   } else {
-    // do stuff for jumping to bookmarklets
+    for (const view of views) {
+      view.style.display = "none";
+      // path is to valid bookmarklet
+      if (view.id === path) {
+        // show bookmarklets page
+        changeMainView("bookmarklets");
+        view.style.display = "block";
+      }
+    }
   }
 }
 
 window.addEventListener("DOMContentLoaded", () => {
+  childDivs = document.querySelectorAll("main > div");
+  views = document.querySelectorAll("div#bookmarklet-view > div");
   changeTab();
 });
 
