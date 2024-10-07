@@ -2,7 +2,7 @@
   --bg: #fff;
   --text: #000;
   --link: #7f828a;
-  --link-underline: #bf3d0d;
+  --link-underline: #2ebf0d;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -10,7 +10,7 @@
     --bg: #000;
     --text: #fff;
     --link: #cfd2da;
-    --link-underline: #ef6d3d;
+    --link-underline: #5eef3e;
   }
 }
 
@@ -29,7 +29,7 @@ body {
   font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   color: var(--text);
-  background: url(background.jpg) center center no-repeat fixed;
+  background: url(banner.gif) center center no-repeat fixed;
   background-size: cover;
 }
 
