@@ -50,14 +50,274 @@
           </ol>
           <h4>List of Bookmarklets:</h4>
           <ul>
+            <li><a href="#about-blank-embed">About:Blank Embedder</a></li>
+            <li><a href="#adblocker">Adblocker</a></li>
+            <li><a href="#archive-search">Archive Search</a></li>
+            <li><a href="#autoclicker">Autoclicker</a></li>
+            <li><a href="#better-ctrl-f">Better Ctrl+F</a></li>
+            <li><a href="#cached-sites">Cached Sites</a></li>
+            <li><a href="#classroom-cloak">Classroom Cloak</a></li>
+            <li><a href="#clear-cookies">Clear Cookies</a></li>
+            <li><a href="#dark-mode">Dark Mode</a></li>
+            <li><a href="#domii">DOMII</a></li>
+            <li><a href="#dog-year-calc">Dog Year Calculator</a></li>
             <li><a href="#eruda">Eruda/Console Editor</a></li>
             <li><a href="#firebug">Firebug</a></li>
-            <li><a href="#x-ray-goggles">X-Ray Goggles</a></li>
+            <li><a href="#flashlight">Flashlight</a></li>
+            <li><a href="#google-translate">Google Translate Page</a></li>
+            <li><a href="#inject-script">Inject Script</a></li>
+            <li><a href="#inspect-element">Inspect Element</a></li>
+            <li>
+              <a href="#khan-answer-overwrite">
+                Khan Academy Answer Overwrite
+              </a>
+            </li>
+            <li><a href="#khan-auto-answer">Khan Academy Auto Answer</a></li>
+            <li>
+              <a href="#khan-energy-point">Khan Academy Energy Point Farmer</a>
+            </li>
+            <li><a href="#local-storage-view">Local Storage View</a></li>
+            <li><a href="#make-page-3d">Make Page 3D</a></li>
+            <li><a href="#notepad">Notepad</a></li>
             <li><a href="#page-editor">Page Editor</a></li>
+            <li><a href="#page-editor2">Page Editor 2</a></li>
+            <li><a href="#page-spinner">Page Spinner</a></li>
+            <li><a href="#page-glitcher">Page Glitcher</a></li>
+            <li><a href="#password-generator">Password Generator</a></li>
+            <li><a href="#perfmap">Perfmap</a></li>
+            <li><a href="#piano">Piano</a></li>
+            <li><a href="#pip">Picture in Picture</a></li>
+            <li><a href="#play-minecraft">Play Minecraft</a></li>
+            <li><a href="#prevent-tab-closing">Prevent Tab Closing</a></li>
+            <li><a href="#quizlet-hacks">Quizlet Hacks</a></li>
+            <li><a href="#randomized-tilt">Randomized Tilt</a></li>
+            <li><a href="#shrek">Shrek</a></li>
+            <li><a href="#snake-game">Snake Game</a></li>
+            <li><a href="#snow">Snow in Chrome</a></li>
+            <li><a href="#stopwatch">Stopwatch</a></li>
+            <li><a href="#teacher-safety">Teacher Safety</a></li>
+            <li><a href="#timer">Timer</a></li>
+            <li><a href="#tinyurl">TinyURL</a></li>
+            <li><a href="#uneditor">Uneditor</a></li>
+            <li><a href="#view-page-source">View Page Source</a></li>
+            <li><a href="#x-ray-goggles">X-Ray Goggles</a></li>
+            <li><a href="#yohoho-hack">YoHoHo Hack</a></li>
+            <li><a href="#youtube-thumbnails">YouTube Thumbnail</a></li>
           </ul>
           <div id="bookmarklet-view">
+            <div id="about-blank-embed">
+              <h3>About:Blank Embedder</h3>
+              <p>
+                Embeds a website on the about:blank page. Copy a link, run the
+                bookmarklet, paste the link into the text box, and press enter.
+                Make sure that pop-ups are not blocked.
+              </p>
+              <code>
+                javascript: (function () {var url = prompt(&quot;Paste the link
+                you want to be embedded into an about:blank page.\n(INCLUDE
+                https://)&quot;, &quot;https://example.com&quot;); var urlObj =
+                new window.URL(window.location.href); win = window.open();
+                win.document.body.style.margin = &quot;0&quot;;
+                win.document.body.style.height = &quot;100vh&quot;; var iframe =
+                win.document.createElement(&quot;iframe&quot;);
+                iframe.style.border = &quot;none&quot;; iframe.style.width =
+                &quot;100%&quot;; iframe.style.height = &quot;100%&quot;;
+                iframe.style.margin = &quot;0&quot;; iframe.referrerpolicy =
+                &quot;no-referrer&quot;; iframe.allow = &quot;fullscreen&quot;;
+                iframe.src = url.toString();
+                win.document.body.appendChild(iframe); var script =
+                win.document.createElement(&quot;script&quot;); script.src =
+                &quot;https://3kh0.github.io/js/main.js&quot;;
+                win.document.body.appendChild(script); })();
+              </code>
+            </div>
+            <div id="adblocker">
+              <h3>Adblocker</h3>
+              <p>
+                Hides ads on a webpage. Go to the webpage you want to remove the
+                ads of and run the bookmarklet.
+              </p>
+              <code>
+                javascript:var st = confirm(&quot;strict adblocker?&quot;);
+                if(st){var invisible =
+                document.createElement(&quot;style&quot;); invisible.innerHTML =
+                &quot;iframe{display:none} embed{display:none}
+                object{display:none} frame{display:none}&quot;;
+                document.body.appendChild(invisible); setInterval(function(){var
+                embeds = document.querySelectorAll(&quot;iframe, embed, frame,
+                object&quot;); for(i = 0; i &lt; embeds.length;
+                i++){embeds[i].remove()}}, 500)} else{var adblock =
+                document.createElement(&quot;style&quot;); adblock.innerHTML =
+                &quot;[src*=adserver] {display: none; } [src*=adlinks] {display:
+                none;} [src*=adtech] {display:none;} [id*=google_ads] { display:
+                none; } [src*=doubleclick.net] { display:none;} [src*=googlead]
+                { display: none; } [href*=googlead] { display:none;}
+                [src*=googlesyndication] { display: none;} [src*=ads.] {
+                display: none; } [src*=.ad] {display: none; } [src*=ad.]
+                {display:none;} [src*=adsmart] { display:none;}&quot;;
+                document.body.appendChild(adblock)} if(st){var elements =
+                document.body.querySelectorAll(&quot;*&quot;); for(i2 = 0; i2
+                &lt; elements.length;
+                i2++){if(elements[i2].id.includes(&quot;google_ads_iframe&quot;)){elements[i2].remove()}}}
+                var x = document.getElementsByClassName(&quot;video-stream
+                html5-main-video&quot;)[0]; function videoblock() {
+                if(x.src.includes(&quot;pltype=adhost&quot;)) { x.currentTime =
+                999999999; }} setInterval(videoblock, 10)
+              </code>
+            </div>
+            <div id="archive-search">
+              <h3>Archive Search</h3>
+              <p>
+                Searches archive.org for selection. Run the bookmarklet and
+                enter your search term in the text box and press enter.
+              </p>
+              <code>
+                javascript: void(location.href =
+                &#x27;http://web.archive.org/web/*/&#x27; + prompt(&quot;Put URL
+                (or search term) here, then press
+                enter&quot;,window.getSelection())); Enter string:
+              </code>
+            </div>
+            <div id="autoclicker">
+              <h3>Autoclicker</h3>
+              <p>A very fast autoclicker.</p>
+              <code>
+                javascript:var DELAY = 1;var autoClickerStyleElement =
+                document.createElement(&quot;style&quot;);autoClickerStyleElement.innerHTML=&quot;*{cursor:
+                crosshair
+                !important;}&quot;;document.body.appendChild(autoClickerStyleElement);function
+                addClicker(e) {if(!e.isTrusted)
+                {return;}if(e.target.classList.contains(&quot;auto-clicker-target&quot;))
+                {e.target.classList.remove(&quot;auto-clicker-target&quot;);}
+                else
+                {e.target.classList.add(&quot;auto-clicker-target&quot;);}document.body.removeChild(autoClickerStyleElement);document.body.removeEventListener(&quot;click&quot;,
+                addClicker);e.preventDefault();autoClick(e.target);}function
+                autoClick(element)
+                {if(element.classList.contains(&quot;auto-clicker-target&quot;))
+                {element.click();setTimeout(function(){ autoClick(element); },
+                DELAY);}}document.body.addEventListener(&quot;click&quot;,
+                addClicker, 1);
+              </code>
+            </div>
+            <div id="better-ctrl-f">
+              <h3>Better Ctrl+F</h3>
+              <p>
+                An improved version of Ctrl+F, but you can search multiple
+                times. Run the bookmarlet and enter a phrase to search. Then,
+                press enter. Enter the color you want to highlight the captured
+                phrases, then press enter. You should see the search terms
+                highlighted in the chosen color.
+              </p>
+              <code>
+                javascript:(function(){var count=0, text,
+                dv;text=prompt(&quot;Search phrase:&quot;,
+                &quot;&quot;);if(text==null ||
+                text.length==0)return;hlColor=prompt(&quot;Color:&quot;,
+                &quot;yellow&quot;);dv=document.defaultView;function
+                searchWithinNode(node, te, len){var pos, skip, spannode,
+                middlebit, endbit, middleclone;skip=0;if( node.nodeType==3
+                ){pos=node.data.toUpperCase().indexOf(te);if(pos&gt;=0){spannode=document.createElement(&quot;SPAN&quot;);spannode.style.backgroundColor=
+                hlColor;middlebit=node.splitText(pos);endbit=middlebit.splitText(len);middleclone=middlebit.cloneNode(true);spannode.appendChild(middleclone);middlebit.parentNode.replaceChild(spannode,middlebit);++count;skip=1;}}else
+                if( node.nodeType==1&amp;&amp; node.childNodes &amp;&amp;
+                node.tagName.toUpperCase()!=&quot;SCRIPT&quot; &amp;&amp;
+                node.tagName.toUpperCase!=&quot;STYLE&quot;){for (var child=0;
+                child &lt; node.childNodes.length;
+                ++child){child=child+searchWithinNode(node.childNodes[child],
+                te, len);}}return skip;}window.status=&quot;Searching for
+                &#x27;&quot;+text+&quot;&#x27;...&quot;;searchWithinNode(document.body,
+                text.toUpperCase(), text.length);window.status=&quot;Found
+                &quot;+count+&quot;
+                occurrence&quot;+(count==1?&quot;&quot;:&quot;s&quot;)+&quot; of
+                &#x27;&quot;+text+&quot;&#x27;.&quot;;})();
+              </code>
+            </div>
+            <div id="cached-sites">
+              <h3>Cached Sites</h3>
+              <p>
+                Possibly an unblocker that uses cached sites from Google. Go to
+                the site you want to unblock and run the bookmarklet.
+              </p>
+              <code>
+                javascript:location.href=&#x27;http://webcache.googleusercontent.com/search?q=cache:&#x27;+window.location.href
+              </code>
+            </div>
+            <div id="classroom-cloak">
+              <h3>Classroom Cloak</h3>
+              <p>
+                Cloaks the page to pose as Google Classroom. Go to the page you
+                want to cloak and run the bookmarklet.
+              </p>
+              <code>
+                javascript:function gcloak() { var link =
+                document.querySelector(&quot;link[rel*=&#x27;icon&#x27;]&quot;)
+                || document.createElement(&#x27;link&#x27;);link.type =
+                &#x27;image/x-icon&#x27;;link.rel = &#x27;shortcut
+                icon&#x27;;link.href =
+                &#x27;https://ssl.gstatic.com/classroom/favicon.png&#x27;;document.title
+                =
+                &#x27;Classes&#x27;;console.log(document.title);document.getElementsByTagName(&#x27;head&#x27;)[0].appendChild(link)
+                };gcloak();setInterval(gcloak, 1000);
+              </code>
+            </div>
+            <div id="clear-cookies">
+              <h3>Clear Cookies</h3>
+              <p>
+                Cookies are pieces of information used to personalize your
+                experience on the web. If you are unable to clear them using the
+                browser, you can use this bookmarklet. Go to the site you want
+                to clear cookies on and run the bookmarklet.
+              </p>
+              <code>
+                javascript:void((function(){var
+                a,b,c,e,f;f=0;a=document.cookie.split(&quot;;
+                &quot;);for(e=0;e&lt;a.length&amp;&amp;a[e];e++){f++;for(b=&quot;.&quot;+location.host;b;b=b.replace(/^(?:%5C.|[^%5C.]+)/,&quot;&quot;)){for(c=location.pathname;c;c=c.replace(/.$/,&quot;&quot;)){document.cookie=(a[e]+&quot;;
+                domain=&quot;+b+&quot;; path=&quot;+c+&quot;; expires=&quot;+new
+                Date((new
+                Date()).getTime()-1e11).toGMTString());}}}alert(&quot;Expired
+                &quot;+f+&quot; cookies&quot;);})())
+              </code>
+            </div>
+            <div id="dark-mode">
+              <h3>Dark Mode</h3>
+              <p>
+                Changes a site to dark mode, even when it is unavailable. Go to
+                the page you want dark mode on and run the bookmarklet.
+              </p>
+              <code>
+                javascript:(function(){function invert(o,t){var
+                r=o.split(&quot;(&quot;),n=r[1].split(&quot;)&quot;)[0].split(&quot;,&quot;);return
+                n.forEach(function(o,r){r&lt;3&amp;&amp;(n[r]=&quot;color&quot;==t&amp;&amp;255-parseInt(o)&lt;50?120:255-parseInt(o))}),n=n.join(&quot;,&quot;),r[0]+&quot;(&quot;+n+&quot;)&quot;}document.querySelectorAll(&quot;*:not([invTouch])&quot;).forEach(function(o){var
+                t=window.getComputedStyle(o);o.style.backgroundColor=invert(t.backgroundColor,&quot;back&quot;),o.style.color=invert(t.color,&quot;color&quot;),o.setAttribute(&quot;invTouch&quot;,&quot;true&quot;)});})();
+              </code>
+            </div>
+            <div id="domii">
+              <h3>DOMII</h3>
+              <p>What the hell does this do?</p>
+              <code>
+                javascript:var
+                s=document.createElement(&#x27;script&#x27;);s.type=&#x27;text/javascript&#x27;;s.onerror=function(e){alert(&#x27;Failed
+                to load the script. The site\&#x27;s Content Security Policy
+                might be blocking it. Feel free to try
+                again.&#x27;);};document.body.appendChild(s);s.src=&#x27;https://blog.roysolberg.com/js/dom2.min.js&#x27;;void(0);
+              </code>
+            </div>
+            <div id="dog-year-calc">
+              <h3>Dog Year Calculator</h3>
+              <p>
+                Calculates a number of years in dog years. Run the bookmarklet
+                and enter a number.
+              </p>
+              <code>
+                javascript:(function()%7Bfunction%20callback()%7B%2F%2Fhi%7Dvar%20s%3Ddocument.createElement(%22script%22)%3Bs.src%3D%22https%3A%2F%2Faspaceman527.github.io%2Fdogyears%2Fscript.js%22%3Bif(s.addEventListener)%7Bs.addEventListener(%22load%22%2Ccallback%2Cfalse)%7Delse%20if(s.readyState)%7Bs.onreadystatechange%3Dcallback%7Ddocument.body.appendChild(s)%3B%7D)()
+              </code>
+            </div>
             <div id="eruda">
               <h3>Eruda/Console Editor</h3>
+              <p>
+                A console for mobile browsers. Execute the bookmark on the page
+                you want to open the console on and you should see a button
+                appear in the bottom right corner. Click it to open the console.
+              </p>
               <code>
                 javascript:(function () { var script =
                 document.createElement(&#039;script&#039;);
@@ -73,21 +333,377 @@
                 firebug=document.createElement(&#039;script&#039;);firebug.setAttribute(&#039;src&#039;,&#039;https://luphoria.com/fbl/fbl/firebug-lite-debug.js&#039;);
               </code>
             </div>
-            <div id="x-ray-goggles">
-              <h3>X-Ray Goggles</h3>
+            <div id="flashlight">
+              <h3>Flashlight</h3>
+              <p>
+                Creates a flashlight around your mouse. Go to a page and run the
+                bookmarklet.
+              </p>
               <code>
-                javascript:(function () {var
-                script=document.createElement(&#039;script&#039;);script.src=&#039;https://x-ray-goggles.mouse.org/webxray.js&#039;;script.className=&#039;webxray&#039;;script.setAttribute(&#039;data-lang&#039;,&#039;en-US&#039;);script.setAttribute(&#039;data-baseuri&#039;,&#039;https://x-ray-goggles.mouse.org&#039;);document.body.appendChild(script);}());
+                javascript:(function(){var
+                js=document.body.appendChild(document.createElement(&quot;script&quot;));js.onerror=function(){alert(&quot;Sorry,
+                the script could not be
+                loaded.&quot;)};js.src=&quot;https://rawgit.com/Krazete/bookmarklets/master/mouselight.js&quot;})();
+              </code>
+            </div>
+            <div id="google-translate">
+              <h3>Google Translate Page</h3>
+              <p>
+                Uses Google Translate as an unblocker. Go to the page you want
+                to unblock and run the bookmarklet.
+              </p>
+              <code>
+                javascript:var
+                a=&quot;https://translate.google.com/translate?u=&quot;;var
+                b=encodeURI(location.href);var c=&quot;?tl=en&quot;;open(a+b+c);
+              </code>
+            </div>
+            <div id="inject-script">
+              <h3>Inject Script</h3>
+              <p>
+                Runs JavaScript on a page. Run the bookmarklet, then enter the
+                javascript you want to execute.
+              </p>
+              <code>
+                javascript:function JSexe(){ if(valJS!=&#x27;null&#x27;
+                &amp;&amp; valJS!=&#x27;undefined&#x27;)strJS=valJS;
+                strJS=prompt(&#x27;Your Javascript code or
+                variable:&#x27;,strJS); if(strJS!=null &amp;&amp;
+                strJS!=&#x27;&#x27; &amp;&amp; strJS!=&#x27;undefined&#x27;){
+                setTimeout(&#x27;valJS=\&#x27;\&#x27;+eval(strJS);JSexe()&#x27;,10);
+                }
+                else{valJS=&#x27;&#x27;;strJS=&#x27;&#x27;;}}valJS=&#x27;&#x27;;strJS=&#x27;&#x27;;JSexe();
+              </code>
+            </div>
+            <div id="inspect-element">
+              <h3>Inspect Element</h3>
+              <p>
+                Opens a custom dev console. Go to the page you want to inspect
+                and run the bookmarklet.
+              </p>
+              <code>
+                javascript:(function () {var v =
+                document.createElement(&#x27;script&#x27;);v.src =
+                &#x27;https://cdn.jsdelivr.net/gh/SnowLord7/devconsole@master/main.js&#x27;;document.body.appendChild(v);}())
+              </code>
+            </div>
+            <div id="khan-answer-overwrite">
+              <h3>Khan Academy Answer Overwrite</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="khan-auto-answer">
+              <h3>Khan Academy Auto Answer</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="khan-energy-point">
+              <h3>Khan Academy Energy Point Farm</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="local-storage-view">
+              <h3>Local Storage View</h3>
+              <p>
+                Shows the local storage on the current site. Go to the page you
+                want to view the local storage of, and run the bookmarklet.
+              </p>
+              <code>
+                javascript:(function(){function
+                l(a,b){b=a.target,a.preventDefault();var
+                d=b.getAttribute(&quot;data-k&quot;);switch(b.className){case&quot;lc&quot;:h.removeItem(d),k();break;case&quot;lv&quot;:b.parentNode.innerHTML=&quot;&lt;pre&gt;&quot;+h[d]+&quot;&lt;/pre&gt;&quot;;break;case&quot;lca&quot;:h.clear(),k();break;case&quot;sc&quot;:i.removeItem(d),k();break;case&quot;sv&quot;:b.parentNode.innerHTML=&quot;&lt;pre&gt;&quot;+i[d]+&quot;&lt;/pre&gt;&quot;;break;case&quot;sca&quot;:i.clear(),k();break;case&quot;x&quot;:c.style.display=&quot;none&quot;}}function
+                k(){e=j+&quot;&lt;tr&gt;&lt;th
+                colspan=3&gt;&lt;h1&gt;localStorage
+                inspector&lt;/h1&gt;&lt;th&gt;&lt;a href=#
+                class=x&gt;close&lt;/a&gt;&lt;tr&gt;&lt;th&gt;storage
+                key&lt;th&gt;size&lt;th&gt;&lt;th&gt;&lt;a href=#
+                class=lca&gt;clear
+                all&lt;/a&gt;&quot;,e+=h.length?&quot;&quot;:&quot;&lt;tr&gt;&lt;td&gt;No
+                Data&quot;;for(d=0;d&lt;h.length;d++)g=h.key(d),e+=(&quot;&lt;tr&gt;&lt;td&gt;$&lt;td&gt;&quot;+h[g].length+&quot;&lt;td&gt;&lt;a
+                href=# data-k=\&quot;$\&quot;
+                class=lv&gt;view&lt;/a&gt;&lt;td&gt;&lt;a href=#
+                data-k=\&quot;$\&quot;
+                class=lc&gt;clear&lt;/a&gt;&quot;).replace(/\$/g,g);e+=&quot;&lt;tr&gt;&lt;th
+                colspan=3&gt;&lt;h1&gt;sessionStorage&lt;/h1&gt;&lt;tr&gt;&lt;th&gt;storage
+                key&lt;th&gt;size&lt;th&gt;&lt;th&gt;&lt;a href=#
+                class=sca&gt;clear
+                all&lt;/a&gt;&quot;,e+=i.length?&quot;&quot;:&quot;&lt;tr&gt;&lt;td&gt;No
+                Data&quot;;for(d=0;d&lt;i.length;d++)g=i.key(d),e+=(&quot;&lt;tr&gt;&lt;td&gt;$&lt;td&gt;&quot;+i[g].length+&quot;&lt;td&gt;&lt;a
+                href=# data-k=\&quot;$\&quot;
+                class=sv&gt;view&lt;/a&gt;&lt;td&gt;&lt;a href=#
+                data-k=\&quot;$\&quot;
+                class=sc&gt;clear&lt;/a&gt;&quot;).replace(/\$/g,g);c.innerHTML=e}var
+                a=document,b=&quot;localStorageList&quot;,c=a.getElementById(b),d,e,f,g,h=window.localStorage,i=window.sessionStorage,j=&quot;&lt;style&gt;$
+                th, $ td {padding:0 1em;text-align:left;}$ th{font-weight:bold}$
+                pre{max-width:400px;max-height:300px;overflow:auto;white-space:pre-wrap;}$
+                h1{font:16px/32px
+                sans-serif;}&lt;/style&gt;&quot;.replace(/\$/g,&quot;#&quot;+b);c||(c=a.createElement(&quot;table&quot;),a.body.appendChild(c),c.addEventListener(&quot;click&quot;,l,!1)),c.setAttribute(&quot;id&quot;,b),c.setAttribute(&quot;style&quot;,&quot;position:fixed;top:20px;right:20px;padding:20px;background:#fff;font:12px/20px
+                monospace;z-index:99999;max-height:100%;overflow:auto;border-radius:10px;border:2px
+                solid #000&quot;),c.style.display=&quot;block&quot;,k()})()
+              </code>
+            </div>
+            <div id="make-page-3d">
+              <h3>Make Page 3D</h3>
+              <p>
+                Makes the page 3D. Go to the page you want to make 3D and run
+                the bookmarklet.
+              </p>
+              <code>
+                javascript:(function(){var
+                js=document.body.appendChild(document.createElement(&quot;script&quot;));js.onerror=function(){alert(&quot;Sorry,
+                the script could not be
+                loaded.&quot;)};js.src=&quot;https://rawgit.com/Krazete/bookmarklets/master/tri.js&quot;})();
+              </code>
+            </div>
+            <div id="notepad">
+              <h3>Notepad</h3>
+              <p>
+                A notepad that uses local storage. Go to a page and run the
+                bookmarklet.
+              </p>
+              <code>
+                javascript: (function() { var parentID = &#x27;a3q_parent&#x27;;
+                var dID = &#x27;a3q_customNotes&#x27;; var buttonID =
+                &#x27;a3q_close_button&#x27;; var saveThrottleSpeed = 100; var
+                lastSave = Date.now(); var waitCallback; function
+                a3q_Save(force) { force = force || false;
+                clearTimeout(waitCallback); if (force || Date.now() - lastSave
+                &gt;= saveThrottleSpeed) { lastSave = Date.now();
+                localStorage.setItem(&#x27;a3q_note&#x27;, a3q_GetContents()); }
+                else { waitCallback = setTimeout(function() { a3q_Save(); },
+                saveThrottleSpeed - Date.now()); } }; function a3q_Load() {
+                return localStorage.getItem(&#x27;a3q_note&#x27;) ||
+                &#x27;&#x27;; }; function a3q_GetContents() { return
+                document.getElementById(dID).innerHTML; }; function a3q_Unload()
+                { a3q_Save(true); d.removeEventListener(&#x27;onkeyup&#x27;,
+                a3q_Save); d.parentNode.removeChild(d);
+                c.removeEventListener(&#x27;onclick&#x27;, c.onclick);
+                c.parentNode.removeChild(c); }; var d =
+                document.getElementById(dID); var c =
+                document.getElementById(buttonID); if (d) { a3q_Unload(); } else
+                { var d = document.createElement(&#x27;textarea&#x27;); d.id =
+                dID; d.innerHTML = a3q_Load(); d.style.backgroundColor =
+                &#x27;#333&#x27;; d.style.color = &#x27;#ccc&#x27;;
+                d.style.border = &#x27;1px solid #ccc&#x27;; d.style.position =
+                &#x27;fixed&#x27;; d.style.width = &#x27;20%&#x27;;
+                d.style.height = &#x27;20%&#x27;; d.style.right =
+                &#x27;2%&#x27;; d.style.bottom = &#x27;2%&#x27;; d.style.padding
+                = &#x27;2px&#x27;; d.style.zIndex = 10000; d.contentEditable =
+                true; document.body.appendChild(d); d.focus(); var lastRun =
+                Date.now(); d.onkeyup = a3q_Save; var c =
+                document.createElement(&#x27;button&#x27;); c.style.position =
+                &#x27;fixed&#x27;; c.id = buttonID; c.style.zIndex = 10000;
+                c.style.bottom = &#x27;2%&#x27;; c.style.right = &#x27;2%&#x27;;
+                c.innerHTML = &#x27;Close&#x27;; c.style.backgroundColor =
+                &#x27;#333&#x27;; c.style.color = &#x27;#ccc&#x27;; c.onclick =
+                function() { a3q_Unload(); }; document.body.appendChild(c);
+                }})();
               </code>
             </div>
             <div id="page-editor">
               <h3>Page Editor</h3>
+              <p></p>
               <code>
                 javascript:if(document.body.contentEditable !=
                 &#039;true&#039;)void(document.body.contentEditable =
                 &#039;true&#039;);else void(document.body.contentEditable =
                 &#039;false&#039;);
               </code>
+            </div>
+            <div id="page-editor2">
+              <h3>Page Editor 2</h3>
+              <p></p>
+              <code>
+                javascript:(function(){var
+                elems=document.getElementsByTagName(&quot;*&quot;);for(var i =
+                0; i&lt;elems.length;i++){elems[i].style.fontFamily=&quot;Comic
+                Sans
+                MS&quot;;elems[i].style.fontSize=Math.random()*75+&quot;px&quot;;elems[i].style.color=&#x27;#&#x27;+Math.random().toString(16).slice(2,
+                8);elems[i].style.backgroundColor=&#x27;#&#x27;+Math.random().toString(16).slice(2,8)}})();document.onclick=function(){(function(){var
+                d=0;setInterval(function(){document.body.style[&#x27;-webkit-transform&#x27;]=
+                &#x27;rotate(&#x27;+ d +&#x27;deg)&#x27;;d+=1},100)}());};
+              </code>
+            </div>
+            <div id="page-spinner">
+              <h3>Page Spinner</h3>
+              <p>
+                Makes the page spin. Go to the page you want to make spin and
+                run the bookmarklet.
+              </p>
+              <code>
+                javascript:(function(){var
+                s=document.createElement(&#x27;style&#x27;);s.innerHTML=&#x27;%40-moz-keyframes
+                roll { 100%25 { -moz-transform: rotate(129600deg); } }
+                %40-o-keyframes roll { 100%25 { -o-transform: rotate(129600deg);
+                } } %40-webkit-keyframes roll { 100%25 { -webkit-transform:
+                rotate(129600deg); } } body{ -moz-animation-name: roll;
+                -moz-animation-duration: 1440s; -moz-animation-iteration-count:
+                360; -o-animation-name: roll; -o-animation-duration: 1440s;
+                -o-animation-iteration-count: 360; -webkit-animation-name: roll;
+                -webkit-animation-duration: 1440s;
+                -webkit-animation-iteration-count: 360;
+                }&#x27;;document.getElementsByTagName(&#x27;head&#x27;)[0].appendChild(s);}());
+              </code>
+            </div>
+            <div id="page-glitcher">
+              <h3>Page Glitcher</h3>
+              <p></p>
+              <code>
+                javascript:(function(){function
+                c(){return&quot;#&quot;+Math.floor(16777215*Math.random()).toString(16)}function
+                r(e){return Math.floor(Math.random()*e)+1}function
+                l(e){e.requestFullscreen?e.requestFullscreen():e.mozRequestFullScreen?e.mozRequestFullScreen():e.webkitRequestFullscreen?e.webkitRequestFullscreen():e.msRequestFullscreen&amp;&amp;e.msRequestFullscreen()}var
+                d=document;d.head.innerHTML=&quot;&lt;style&gt;*{margin:0;
+                overflow:hidden; padding:0;overflow:hidden;} div{
+                transform-origin: 50% 50%; width:100%; height:1px;
+                position:relative; z-index:1;}
+                &lt;/style&gt;&quot;,d.body.innerHTML=&quot;&quot;;var
+                w=window.screen.availHeight;for(d.body.addEventListener(&quot;click&quot;,function(){l(d.documentElement)}),i=0;w&gt;=i;i++){var
+                z=d.createElement(&quot;div&quot;);z.id=&quot;b&quot;+i,z.style.backgroundColor=c(),d.body.appendChild(z)}setInterval(function(){for(var
+                e=0;10&gt;e;e++)d.getElementById(&quot;b&quot;+r(w)).style.backgroundColor=c(),d.getElementById(&quot;b&quot;+r(w)).style.height=r(4)+&quot;px&quot;,d.body.style.backgroundColor=c(),d.body.style.transform=r(256)&gt;128?&quot;scale(3)
+                rotate(&quot;+r(35)+&quot;deg)&quot;:&quot;rotate(0deg)
+                scale(1)&quot;;window.scrollTo(0,document.body.scrollHeight)},10),setInterval(function(){window.scrollTo(0,0)},50);})()
+              </code>
+            </div>
+            <div id="password-generator">
+              <h3>Password Generator</h3>
+              <p>
+                Generates a secure password. Run the bookmarklet to generate a
+                password.
+              </p>
+              <code>
+                javascript: var b64pad=&quot;&quot;;var sh =
+                prompt(&quot;show?&quot;);var chrsz=8;function
+                b64_sha1(s){return
+                binb2b64(core_sha1(str2binb(s),s.length*chrsz));}function
+                core_sha1(x,len){x[len&gt;&gt;5]|=0x80&lt;&lt;(24-len);x[((len+64&gt;&gt;9)&lt;&lt;4)+15]=len;var
+                w=Array(80);var a=1732584193;var b=-271733879;var
+                c=-1732584194;var d=271733878;var e=-1009589776;for(var
+                i=0;i&lt;x.length;i+=16){var olda=a;var oldb=b;var oldc=c;var
+                oldd=d;var olde=e;for(var
+                j=0;j&lt;80;j++){if(j&lt;16)w[j]=x[i+j];else
+                w[j]=rol(w[j-3]^w[j-8]^w[j-14]^w[j-16],1);var
+                t=safe_add(safe_add(rol(a,5),sha1_ft(j,b,c,d)),safe_add(safe_add(e,w[j]),sha1_kt(j)));e=d;d=c;c=rol(b,30);b=a;a=t;}a=safe_add(a,olda);b=safe_add(b,oldb);c=safe_add(c,oldc);d=safe_add(d,oldd);e=safe_add(e,olde);}return
+                Array(a,b,c,d,e);}function sha1_ft(t,b,c,d){if(t&lt;20)return
+                (b&amp;c)|((~b)&amp;d);if(t&lt;40)return b^c^d;if(t&lt;60)return
+                (b&amp;c)|(b&amp;d)|(c&amp;d);return b^c^d;}function
+                sha1_kt(t){return
+                (t&lt;20)?1518500249:(t&lt;40)?1859775393:(t&lt;60)?-1894007588:-899497514;}function
+                safe_add(x,y){var lsw=(x&amp;0xFFFF)+(y&amp;0xFFFF);var
+                msw=(x&gt;&gt;16)+(y&gt;&gt;16)+(lsw&gt;&gt;16);return
+                (msw&lt;&lt;16)|(lsw&amp;0xFFFF);}function rol(num,cnt){return
+                (num&lt;&lt;cnt)|(num&gt;&gt;&gt;(32-cnt));}function
+                str2binb(str){var bin=Array();var
+                mask=(1&lt;&lt;chrsz)-1;for(var
+                i=0;i&lt;str.length*chrsz;i+=chrsz)bin[i&gt;&gt;5]|=(str.charCodeAt(i/chrsz)&amp;mask)&lt;&lt;(24-i);return
+                bin;}function binb2b64(binarray){var
+                tab=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;;var
+                str=&quot;&quot;;for(var i=0;i&lt;binarray.length*4;i+=3){var
+                triplet=(((binarray[i&gt;&gt;2]&gt;&gt;8*(3-i%254))&amp;0xFF)&lt;&lt;16)|(((binarray[i+1&gt;&gt;2]&gt;&gt;8*(3-(i+1)%254))&amp;0xFF)&lt;&lt;8)|((binarray[i+2&gt;&gt;2]&gt;&gt;8*(3-(i+2)%254))&amp;0xFF);for(var
+                j=0;j&lt;4;j++){if(i*8+j*6&gt;binarray.length*32)str+=b64pad;else
+                str+=tab.charAt((triplet&gt;&gt;6*(3-j))&amp;0x3F);}}return
+                str;}function doIt(){var master=window.prompt(&quot;Enter your
+                master password&quot;,
+                &quot;&quot;);if(master!=&quot;&quot;&amp;&amp;master!=null){host=document.location.href.match(/http(s*):\/\/([^/]+)/)[2];if(sld=host.match(/([^.]+\.([a-z][a-z][a-z]+|a[^abhjkpvy]|b[^cdklnpqux]|c[^bejkpqsty]|d[ejkmoz]|e[cegsu]|f[imor]|g[^cjkouvxz]|h[kmnrtu]|i[demnoqrst]|j[eop]|k[gimnpryz]|l[abcikrstuvy]|m[^bfijmz]|n[acefgloru]|om|p[aefhklmnrstwy]|qa|r[eosuw]|s[^fpqsw]|t[^abeiqrsuxy]|u[agsyz]|v[aceginu]|w[fs]|yt))$/i)){domain=sld[0];}else{domain=host.match(/([^.]+\.[^.]+\.[a-z][a-z])$/i)[0];}var
+                i=0,j=0,p=b64_sha1(master+&quot;:&quot;+domain).substr(0,13)+&quot;@1a&quot;,E=document.getElementsByTagName(&quot;input&quot;),g=false;;for(j=0;j&lt;E.length;j++){D=E[j];if(D.type==&quot;password&quot;){D.value=p;D.focus();g=true;}if(D.type==&quot;text&quot;){if(D.name.toUpperCase().indexOf(&quot;PASSWORD&quot;)!=-1||D.name.toUpperCase().indexOf(&quot;PASSWD&quot;)!=-1){D.value=p;D.focus();g=true;}}}if(sh==1){window.prompt(&quot;Your
+                password for &quot;+domain+&quot;
+                is&quot;,p)}}}doIt();void(null);
+              </code>
+            </div>
+            <div id="perfmap">
+              <h3>Perfmap</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="piano">
+              <h3>Piano</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="pip">
+              <h3>Picture in Picture</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="play-minecraft">
+              <h3>Play Minecraft</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="prevent-tab-closing">
+              <h3>Prevent Tab Closing</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="quizlet-hacks">
+              <h3>Quizlet Hacks</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="randomized-tilt">
+              <h3>Randomized Tilt</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="shrek">
+              <h3>Shrek</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="snake-game">
+              <h3>Snake Game</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="snow">
+              <h3>Snow in Chrome</h3>
+              <p>Adds snow to the webpage.</p>
+              <code></code>
+            </div>
+            <div id="stopwatch">
+              <h3>Stopwatch</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="teacher-safety">
+              <h3>Teacher Safety</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="timer">
+              <h3>Timer</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="tinyurl">
+              <h3>TinyURL</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="uneditor">
+              <h3>Uneditor</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="x-ray-goggles">
+              <h3>X-Ray Goggles</h3>
+              <p>
+                An easy way to see the code behind webpages and remix webpages.
+              </p>
+              <code>
+                javascript:(function () {var
+                script=document.createElement(&#039;script&#039;);script.src=&#039;https://x-ray-goggles.mouse.org/webxray.js&#039;;script.className=&#039;webxray&#039;;script.setAttribute(&#039;data-lang&#039;,&#039;en-US&#039;);script.setAttribute(&#039;data-baseuri&#039;,&#039;https://x-ray-goggles.mouse.org&#039;);document.body.appendChild(script);}());
+              </code>
+            </div>
+            <div id="yohoho-hack">
+              <h3>YoHoHo Hack</h3>
+              <p></p>
+              <code></code>
+            </div>
+            <div id="youtube-thumbnails">
+              <h3>YouTube Thumbnails</h3>
+              <p></p>
+              <code></code>
             </div>
           </div>
         </div>
