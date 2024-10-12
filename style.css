@@ -81,7 +81,7 @@ div#bookmarklet-view > div {
   display: none;
 }
 
-a {
+a:not(a:has(img)) {
   font-weight: normal;
   text-decoration: none;
   color: var(--link);
@@ -94,6 +94,12 @@ a {
 
   &.active {
     border-bottom: 0.1rem var(--link-underline) solid;
+  }
+}
+
+a:has(img) {
+  &:hover {
+    filter: brightness(60%);
   }
 }
 
