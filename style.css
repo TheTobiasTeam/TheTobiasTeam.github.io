@@ -15,6 +15,10 @@
   body {
     backdrop-filter: brightness(150%);
   }
+  img[src="./logo.webp"],
+  img[src="../logo.webp"] {
+    filter: invert(1);
+  }
 }
 
 html,
