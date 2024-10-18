@@ -19,7 +19,7 @@ function changeTab() {
     path = "#home";
   }
   path = path.slice(1);
-  if (["home", "bookmarklets", "proxies"].includes(path)) {
+  if (["home", "bookmarklets", "downloadable", "proxies"].includes(path)) {
     changeMainView(path);
   } else {
     for (const view of views) {
